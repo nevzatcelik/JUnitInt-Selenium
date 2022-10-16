@@ -1,9 +1,7 @@
-package HomeWork;
+package homeWork;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.checkerframework.checker.lock.qual.GuardSatisfied;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import java.sql.Driver;
-import java.sql.DriverManager;
 import java.time.Duration;
 
 public class C02_homework_DAY07 {
