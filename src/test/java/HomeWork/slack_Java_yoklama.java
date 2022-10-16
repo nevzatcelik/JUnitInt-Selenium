@@ -3,6 +3,7 @@ package HomeWork;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ public class slack_Java_yoklama {
     WebDriver driver;
 
     @Before
-    public void SetUp(){
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -49,13 +50,7 @@ public class slack_Java_yoklama {
 
         WebElement gonder= driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span"));
         gonder.click();
-        Thread.sleep(1000);
-
-
-
-
-
-
+        Thread.sleep(3000);
 
     }
 
