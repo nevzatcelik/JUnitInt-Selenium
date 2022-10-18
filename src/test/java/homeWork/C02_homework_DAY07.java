@@ -47,16 +47,19 @@ public class C02_homework_DAY07 {
       //  1. http://zero.webappsecurity.com/ Adresine gidin
         driver.get("http://zero.webappsecurity.com/");
        //2. Sign in butonuna basin
+
         WebElement singInButton=driver.findElement(By.xpath("//button[@id='signin_button']"));
         singInButton.click();
         Thread.sleep(1000);
         //3. Login kutusuna “username” yazin
+
         WebElement username= driver.findElement(By.xpath("//input[@type='text']"));
         username.sendKeys("username");
         Thread.sleep(1000);
+
         // 4. Password kutusuna “password” yazin
-        WebElement surname= driver.findElement(By.xpath("//input[@type='password']"));
-        surname.sendKeys("password"+ Keys.ENTER);
+        WebElement password= driver.findElement(By.xpath("//input[@type='password']"));
+       password.sendKeys("password"+ Keys.ENTER);
         Thread.sleep(1000);
 
         driver.navigate().back();
@@ -82,6 +85,7 @@ public class C02_homework_DAY07 {
         select.selectByVisibleText("Eurozone (euro)");
         Thread.sleep(1000);
 
+
         //9. “amount” kutusuna bir sayi girin
         WebElement amount= driver.findElement(By.xpath("(//input[@type='text'])[5]"));
         amount.sendKeys("1000");
@@ -91,6 +95,7 @@ public class C02_homework_DAY07 {
         WebElement uSDollars=driver.findElement(By.xpath("(//input[@type='radio'])[1]"));
         System.out.println(uSDollars.isSelected());
         Thread.sleep(1000);
+
        //11. “Selected currency” butonunu secin
         WebElement selectedCurrency=driver.findElement(By.xpath("(//input[@type='radio'])[2]"));
         selectedCurrency.click();
@@ -111,7 +116,7 @@ public class C02_homework_DAY07 {
 
     }
 
-    @After
+     @After
     public void tearDown(){
          driver.close();
     }
