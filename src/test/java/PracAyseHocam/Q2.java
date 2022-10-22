@@ -41,8 +41,10 @@ driver i kapatiniz
     public void beforeTest(){
         driver.get("https://www.teknosa.com/");
     }
+
     @Test
     public void test01(){
+        driver.manage().deleteAllCookies();
         driver.findElement(By.xpath("(//button[@class='search-button js_search_button sbx-fake btn-search'])[1]"))
                 .sendKeys("oppo"+ Keys.ENTER);
 

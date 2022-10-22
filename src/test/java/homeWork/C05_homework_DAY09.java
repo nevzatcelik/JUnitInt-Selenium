@@ -21,8 +21,6 @@ public class C05_homework_DAY09 extends TestBase {
     public void test01(){
         driver.get("https://html.com/tags/iframe/");
         Actions actions=new Actions(driver);
-
-
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
                 sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
                 sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).
@@ -41,7 +39,6 @@ public class C05_homework_DAY09 extends TestBase {
 
         WebElement isvideoPlayed=driver.findElement(By.xpath("//video[@class='video-stream html5-main-video']"));
         Assert.assertTrue(isvideoPlayed.isDisplayed());
-
 
     }
 }
