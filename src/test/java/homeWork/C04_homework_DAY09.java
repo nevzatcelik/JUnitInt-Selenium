@@ -22,16 +22,19 @@ public class C04_homework_DAY09 extends TestBase {
     @Test
     public void test01(){
         driver.get("http://webdriveruniversity.com/Actions");
-        Actions actions=new Actions(driver);
 
+       Actions actions=new Actions(driver);
         WebElement hoverOverMeFirst=driver.findElement(By.xpath("(//button[@class='dropbtn'])[1]"));
         actions.moveToElement(hoverOverMeFirst).perform();
+
 
         WebElement link1= driver.findElement(By.xpath("(//a[@class='list-alert'])[1]"));
         link1.click();
 
+
         System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
+
 
         WebElement clickandHold= driver.findElement(By.xpath("(//div[@class='col-lg-12 text-center'])[3]"));
         actions.clickAndHold(clickandHold).perform();
@@ -40,9 +43,6 @@ public class C04_homework_DAY09 extends TestBase {
 
         WebElement doubleClickMe=driver.findElement(By.xpath("//div[@id='double-click']"));
         actions.doubleClick(doubleClickMe).perform();
-
-
-
 
     }
 
