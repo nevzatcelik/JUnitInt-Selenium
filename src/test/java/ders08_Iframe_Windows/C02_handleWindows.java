@@ -34,7 +34,7 @@ public class C02_handleWindows {
          */
 
         Set<String> windowHandlesSeti=driver.getWindowHandles();
-        System.out.println("ilk sayfa WHD "+ilkSayfaWinHandDegeri);
+        System.out.println("Ilk sayfa WHD "+ilkSayfaWinHandDegeri);
         System.out.println("iki widow un window handle degerleri: "+windowHandlesSeti);
 
         // Acilan sayfadaki en bastaki yazinin gorunur oldugunu
