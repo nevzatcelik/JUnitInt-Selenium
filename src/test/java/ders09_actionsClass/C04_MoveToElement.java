@@ -25,7 +25,7 @@ public class C04_MoveToElement extends TestBase {
         WebElement crateList=driver.findElement(By.xpath("(//span[@class='nav-text'])[1]"));
         crateList.click();
 
-        Thread.sleep(1000);
+        bekle(5);
 
         WebElement yourList=driver.findElement(By.xpath("(//div[@role='heading'])[1]"));
         String expected="Your Lists";
