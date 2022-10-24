@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
-import java.util.Set;
-
 public class C02_handleWindows {
     WebDriver driver;
     @Before
@@ -24,19 +22,8 @@ public class C02_handleWindows {
     public void windowtesti(){
         // https://the-internet.herokuapp.com/iframe adresine gidin
         driver.get("https://the-internet.herokuapp.com/iframe");
-        String ilkSayfaWinHandDegeri= driver.getWindowHandle();
         // elemental selenium linkini tiklayin
         driver.findElement(By.linkText("Elemental Selenium")).click();
-        /*
-        Bir linke tikladigimizda driveri acilan yeni window a direk switch yapamayiz oncelikle o sayfanin window
-        handle degerini bulamli
-        ve o degeri kullanarak yeni sayaya gecmeliyiz
-         */
-
-        Set<String> windowHandlesSeti=driver.getWindowHandles();
-        System.out.println("Ilk sayfa WHD "+ilkSayfaWinHandDegeri);
-        System.out.println("iki widow un window handle degerleri: "+windowHandlesSeti);
-
         // Acilan sayfadaki en bastaki yazinin gorunur oldugunu
         WebElement baslikElementi= driver.findElement(By.tagName("h1"));
         Assert.assertTrue(baslikElementi.isDisplayed());
