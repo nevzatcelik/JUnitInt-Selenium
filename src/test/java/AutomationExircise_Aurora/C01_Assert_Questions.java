@@ -1,4 +1,4 @@
-package Aurora;
+package AutomationExircise_Aurora;
 
 import org.junit.Assert;
 import org.junit.Test;
