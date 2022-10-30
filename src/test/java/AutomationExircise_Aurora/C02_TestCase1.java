@@ -121,18 +121,5 @@ public class C02_TestCase1 extends TestBase {
         String actualMessage2=deleted.getText();
         assertEquals(expectedMessage2,actualMessage2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
