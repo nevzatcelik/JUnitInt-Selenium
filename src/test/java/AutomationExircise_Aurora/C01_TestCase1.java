@@ -8,11 +8,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
+import java.io.IOException;
 import java.security.Key;
 
 import static org.junit.Assert.*;
 
 public class C02_TestCase1 extends TestBase {
+
+        //     mail=aurora@gmail.com
+        //     password=aurora
+
 
         /*
          1. Launch browser
@@ -36,7 +41,7 @@ public class C02_TestCase1 extends TestBase {
          */
 
     @Test
-    public void test01(){
+    public void test01() throws IOException {
         //   2. Navigate to url 'http://automationexercise.com'
         driver.navigate().to("http://automationexercise.com");
 
@@ -52,25 +57,53 @@ public class C02_TestCase1 extends TestBase {
        //5. Verify 'New User Signup!' is visible
         WebElement newUserSignUp= driver.findElement(By.xpath("//h2[text()='New User Signup!']"));
         assertTrue(newUserSignUp.isDisplayed());
+     //  String expected="New User Signup!";
+    //  String actual=newUserSignUp.getText();
+     //  assertEquals(expected,actual);
 
        // 6. Enter name and email address
         WebElement name= driver.findElement(By.xpath("//input[@type='text']"));
         name.sendKeys("Nevzat=-");
+        bekle(2);
         WebElement email= driver.findElement(By.xpath("(//input[@type='email'])[2]"));
         email.sendKeys("Nevzatcelik15@.gmail.com");
-
-        // 7. Click 'Signup' button
+        bekle(2);
         WebElement submit= driver.findElement(By.xpath("(//button[@type='submit'])[2]"));
         submit.click();
-        //Eger bir TestCase de;
+        bekle(2);
+        assertTrue(newUserSignUp.isDisplayed());  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        name.clear();
+        email.clear();
+        bekle(2);
+        System.out.println("===============================================================================");
+        name.sendKeys("Nevzat");
+        bekle(1);
+
+        email.sendKeys("Nevzatcelik15@gmailcom");
+        submit.click();
+
+        bekle(1);
+      //  assertTrue(newUserSignUp.isDisplayed());
+
+
+        // 7. Click 'Signup' button
+
+        tumSayfaResimCek();
+       // assertTrue(newUserSignUp.isDisplayed());  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        driver.navigate().back();
+        // burada bir hata mevcut ve bu hatayi bulup screenShot alalim
+        // Eger bir TestCase de;
         // Olumsuz bir testi kontrol etmek istediysek ayni sayfada kaliyor olmamiz gerekir
-        assertTrue(newUserSignUp.isDisplayed());
+
+
+        bekle(2);
         name.clear();
         bekle(1);
         name.sendKeys("Nevzat");
         bekle(1);
         email.clear();
-        email.sendKeys("Nevzattt11@gmail.com");
+        email.sendKeys("Nevzatttt111@gmail.com");
         bekle(1);
         submit.click();
 
