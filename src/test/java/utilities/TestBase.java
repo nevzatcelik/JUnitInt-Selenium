@@ -3,11 +3,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -24,7 +23,7 @@ public class TestBase {
     }
     @After
     public void teardown(){
-        driver.close();
+      //  driver.close();
     }
     public static void bekle(int beklenecekSaniye){
         try {
@@ -59,4 +58,5 @@ public class TestBase {
         File geciciResim= target.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciResim,tumSayfaSShot);
     }
+
 }

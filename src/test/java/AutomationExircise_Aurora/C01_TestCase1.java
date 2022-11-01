@@ -5,15 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
 import java.io.IOException;
-import java.security.Key;
 
 import static org.junit.Assert.*;
 
-public class C02_TestCase1 extends TestBase {
+public class C01_TestCase1 extends TestBase {
 
         //     mail=aurora@gmail.com
         //     password=aurora
