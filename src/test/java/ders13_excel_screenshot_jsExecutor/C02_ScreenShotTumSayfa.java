@@ -15,9 +15,9 @@ public class C02_ScreenShotTumSayfa extends TestBase {
         WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
         // sonuclarin Nutella icerdigini test edelim
-        WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        WebElement sonucYaziElement= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         String expectedkelime="Nutella";
-        String actualYazi= sonucYaziElementi.getText();
+        String actualYazi= sonucYaziElement.getText();
         Assert.assertTrue(actualYazi.contains(expectedkelime));
         // Tum sayfanin screenshot'ini almak icin 4 adim gerekiyor
         // 1- TakesScreenShot objesi olusturup
